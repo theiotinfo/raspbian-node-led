@@ -31,11 +31,11 @@ io.on('connection', function(socket){
 	switch(msg) {
 	    case "on":
 	    	io.emit('console message', "LED will be switched ON now");
-	    	led.write(1, readOnOff);
+	    	led.write(1, readAndReport);
 	        break;
 	    case "off":
   			io.emit('console message', "LED will be switched OFF now");
-  			led.write(0, readOnOff);
+  			led.write(0, readAndReport);
 	        break;
 	    default:
 	        io.emit('console message', "No such command");
